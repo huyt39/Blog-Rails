@@ -1,5 +1,7 @@
 <% cache @post do %>
     <h1><%= @post.title %></h1>
+    <%= image_tag @post.featured_image if @post.featured_image.attached? %>
+
     <%= @post.content %>
 <% end %>
 
