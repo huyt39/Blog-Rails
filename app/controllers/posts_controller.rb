@@ -39,7 +39,7 @@ class PostsController < ApplicationController
 
 private
   def post_params
-    params.expect(post: [:title])
+    params.expect(post: [:title, :content])
   end
 
   def set_post

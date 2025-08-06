@@ -1,4 +1,7 @@
-<h1><%= @post.title %></h1>
+<% cache @post do %>
+    <h1><%= @post.title %></h1>
+    <%= @post.content %>
+<% end %>
 
 <%= link_to "Back", posts_path %>
 <% if authenticated? %>
